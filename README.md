@@ -65,8 +65,44 @@ Install dependencies:
 
 Start the development server:
 
-<img width="644" height="107" alt="image" src="https://github.com/user-attachments/assets/152c7556-480a-4ac2-b0aa-385372b271ca" />
+<img width="551" height="108" alt="image" src="https://github.com/user-attachments/assets/00a89ee5-aba2-4586-b0b8-91fad498ca95" />
 
 Open the app in your browser:
 
 <img width="557" height="112" alt="image" src="https://github.com/user-attachments/assets/db707a77-dc22-4b35-a407-f6bdb47786be" />
+
+🧪 How the Form Works
+1. User fills out all fields
+Validation errors appear immediately under each field.
+
+2. User clicks Register
+Button changes to "Registering…"
+
+Form is disabled
+
+1.5 second simulated server delay runs
+
+3. On success
+Form resets
+
+Green success message appears
+
+Submitted data logs to the console
+
+📁 Project Structure
+
+<img width="594" height="183" alt="image" src="https://github.com/user-attachments/assets/39134693-84a1-440a-9ec4-4c02a768a373" />
+
+📝 Notes for the Instructor
+No useState is used for form control (per assignment rules)
+
+Success state uses isSubmitSuccessful from React Hook Form
+
+Form reset uses reset() after async submission
+
+All validation rules are implemented inside register()
+
+UI is styled inline for clarity and simplicity
+
+✔️ Status
+Completed and fully functional.
