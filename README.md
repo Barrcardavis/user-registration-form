@@ -104,5 +104,102 @@ All validation rules are implemented inside register()
 
 UI is styled inline for clarity and simplicity
 
+## 🧪 Test Cases
+
+Below are the required **six test cases** (3 normal + 3 edge cases) demonstrating validation behavior and successful form submission.
+
+---
+
+### ✅ Normal Test Cases
+
+#### **Test Case 1 — Valid Registration**
+**Input:**
+- Full Name: "David Davis"
+- Email: "david@example.com"
+- Password: "abcdef"
+- Confirm Password: "abcdef"
+- Role: "Developer"
+- Terms: checked
+
+**Expected Result:**  
+Form submits successfully, shows green “Registration successful!” message, and resets fields.
+
+---
+
+#### **Test Case 2 — Valid Designer Account**
+**Input:**
+- Full Name: "Sarah Lee"
+- Email: "sarah.lee@test.com"
+- Password: "mypassword"
+- Confirm Password: "mypassword"
+- Role: "Designer"
+- Terms: checked
+
+**Expected Result:**  
+Successful submission with success message and form reset.
+
+---
+
+#### **Test Case 3 — Valid Product Manager Registration**
+**Input:**
+- Full Name: "John Smith"
+- Email: "john.smith@company.com"
+- Password: "123456"
+- Confirm Password: "123456"
+- Role: "Product Manager"
+- Terms: checked
+
+**Expected Result:**  
+Successful submission and form reset.
+
+---
+
+### ⚠️ Edge Test Cases
+
+#### **Edge Case 1 — Passwords Do Not Match**
+**Input:**
+- Password: "abcdef"
+- Confirm Password: "abc123"
+
+**Expected Result:**  
+Error message: **“Passwords do not match”**  
+Form does NOT submit.
+
+---
+
+#### **Edge Case 2 — Invalid Email Format**
+**Input:**
+- Email: "notanemail"
+
+**Expected Result:**  
+Error message: **“Enter a valid email address”**  
+Form does NOT submit.
+
+---
+
+#### **Edge Case 3 — Terms Not Checked**
+**Input:**
+- All fields valid  
+- Terms checkbox **not checked**
+
+**Expected Result:**  
+Error message: **“You must agree to the terms”**  
+Form does NOT submit.
+
+---
+
+### ✔️ Summary Table
+
+| Test Case | Type | Expected Result |
+|----------|------|-----------------|
+| Valid Registration | Normal | Success message + reset |
+| Valid Designer Account | Normal | Success message + reset |
+| Valid Product Manager | Normal | Success message + reset |
+| Password Mismatch | Edge | Error: passwords do not match |
+| Invalid Email | Edge | Error: invalid email format |
+| Terms Not Checked | Edge | Error: must agree to terms |
+
+
+
 ✔️ Status
 Completed and fully functional.
